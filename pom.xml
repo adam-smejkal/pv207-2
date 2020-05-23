@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>base-kie-project</artifactId>
-  <groupId>org.kie.templates</groupId>
-  <version>1.0.0</version>
+  <groupId>com.muni</groupId>
+  <artifactId>SeminarOrganizer</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>kjar</packaging>
-  <name>base-kie-project</name>
-  <description>Base KIE project</description>
+  <name>SeminarOrganizer</name>
+  <description>Website which helps organizers of private seminars find lecturers. The lecturers register on the website and put in lectures they can teach with dates when they are available. The organizers then can search and book available lectures on a chosen date.
+Organizers provide the facilities (classrooms) for the lectures and seminars to take place in.</description>
   <dependencies>
     <dependency>
       <groupId>org.kie</groupId>
