@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_xDtToJ0jEeqJZarPKLkCUw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_UoDV4J0kEeqJZarPKLkCUw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_nameItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_seminarItem" structureRef="com.muni.seminarorganizer.Seminar"/>
   <bpmn2:itemDefinition id="__5A90E225-5E28-4860-9562-36C5F5063D2D_AcceptCharsetInputXItem" structureRef="String"/>
@@ -31,7 +31,7 @@
   <bpmn2:itemDefinition id="__DA28C7B9-7FA0-4B21-BE52-50D814A64592_NotCompletedReassignInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__DA28C7B9-7FA0-4B21-BE52-50D814A64592_NotStartedNotifyInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__DA28C7B9-7FA0-4B21-BE52-50D814A64592_NotCompletedNotifyInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameOutputXItem" structureRef="String"/>
   <bpmn2:process id="SeminarOrganizer.LookupSeminar" drools:packageName="com.muni.seminarorganizer" drools:version="1.0" drools:adHoc="false" name="LookupSeminar" isExecutable="true" processType="Public">
     <bpmn2:property id="name" itemSubjectRef="_nameItem" name="name"/>
     <bpmn2:property id="seminar" itemSubjectRef="_seminarItem" name="seminar"/>
@@ -70,43 +70,44 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_1DDC627C-5171-4A41-B9C7-731F55F27527</bpmn2:incoming>
       <bpmn2:outgoing>_BB77C3B6-10A0-4EA8-A015-142D48BC1EB7</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_xDtToZ0jEeqJZarPKLkCUw">
+      <bpmn2:ioSpecification id="_UoDV4Z0kEeqJZarPKLkCUw">
         <bpmn2:dataInput id="_DA28C7B9-7FA0-4B21-BE52-50D814A64592_TaskNameInputX" drools:dtype="Object" itemSubjectRef="__DA28C7B9-7FA0-4B21-BE52-50D814A64592_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameInputX" drools:dtype="String" itemSubjectRef="__DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameInputXItem" name="Seminar name"/>
         <bpmn2:dataInput id="_DA28C7B9-7FA0-4B21-BE52-50D814A64592_SkippableInputX" drools:dtype="Object" itemSubjectRef="__DA28C7B9-7FA0-4B21-BE52-50D814A64592_SkippableInputXItem" name="Skippable"/>
-        <bpmn2:inputSet id="_xDtTop0jEeqJZarPKLkCUw">
+        <bpmn2:dataOutput id="_DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameOutputX" drools:dtype="String" itemSubjectRef="__DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameOutputXItem" name="Seminar name"/>
+        <bpmn2:inputSet id="_UoDV4p0kEeqJZarPKLkCUw">
           <bpmn2:dataInputRefs>_DA28C7B9-7FA0-4B21-BE52-50D814A64592_TaskNameInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_DA28C7B9-7FA0-4B21-BE52-50D814A64592_SkippableInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_xDtTo50jEeqJZarPKLkCUw"/>
+        <bpmn2:outputSet id="_UoDV450kEeqJZarPKLkCUw">
+          <bpmn2:dataOutputRefs>_DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_xDtTpJ0jEeqJZarPKLkCUw">
+      <bpmn2:dataInputAssociation id="_UoDV5J0kEeqJZarPKLkCUw">
         <bpmn2:targetRef>_DA28C7B9-7FA0-4B21-BE52-50D814A64592_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_xDtTpZ0jEeqJZarPKLkCUw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_xDtTpp0jEeqJZarPKLkCUw"><![CDATA[LookupSeminar-EnterSeminarName]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_xDtTp50jEeqJZarPKLkCUw">_DA28C7B9-7FA0-4B21-BE52-50D814A64592_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_UoDV5Z0kEeqJZarPKLkCUw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_UoDV5p0kEeqJZarPKLkCUw"><![CDATA[LookupSeminar-EnterSeminarName]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_UoDV550kEeqJZarPKLkCUw">_DA28C7B9-7FA0-4B21-BE52-50D814A64592_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_xDtTqJ0jEeqJZarPKLkCUw">
-        <bpmn2:sourceRef>name</bpmn2:sourceRef>
-        <bpmn2:targetRef>_DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_xDtTqZ0jEeqJZarPKLkCUw">
+      <bpmn2:dataInputAssociation id="_UoDV6J0kEeqJZarPKLkCUw">
         <bpmn2:targetRef>_DA28C7B9-7FA0-4B21-BE52-50D814A64592_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_xDtTqp0jEeqJZarPKLkCUw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_xDtTq50jEeqJZarPKLkCUw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_xDtTrJ0jEeqJZarPKLkCUw">_DA28C7B9-7FA0-4B21-BE52-50D814A64592_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_UoDV6Z0kEeqJZarPKLkCUw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_UoDV6p0kEeqJZarPKLkCUw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_UoDV650kEeqJZarPKLkCUw">_DA28C7B9-7FA0-4B21-BE52-50D814A64592_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:potentialOwner id="_33db2b2a-90d7-4317-8f1f-ee74440e4d71">
-        <bpmn2:resourceAssignmentExpression id="_xDtTrZ0jEeqJZarPKLkCUw">
-          <bpmn2:formalExpression id="_xDtTrp0jEeqJZarPKLkCUw">wbadmin</bpmn2:formalExpression>
+      <bpmn2:dataOutputAssociation id="_UoDV7J0kEeqJZarPKLkCUw">
+        <bpmn2:sourceRef>_DA28C7B9-7FA0-4B21-BE52-50D814A64592_Seminar-nameOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>name</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_037d804e-b028-4202-b297-1d775f3b13c0">
+        <bpmn2:resourceAssignmentExpression id="_UoDV7Z0kEeqJZarPKLkCUw">
+          <bpmn2:formalExpression id="_UoDV7p0kEeqJZarPKLkCUw">wbadmin</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
     </bpmn2:userTask>
     <bpmn2:task id="_5A90E225-5E28-4860-9562-36C5F5063D2D" drools:taskName="Rest" name="Find seminar">
-      <bpmn2:documentation id="_xDtTr50jEeqJZarPKLkCUw"><![CDATA[jbpm-workitems-rest/index.html]]></bpmn2:documentation>
+      <bpmn2:documentation id="_UoDV750kEeqJZarPKLkCUw"><![CDATA[jbpm-workitems-rest/index.html]]></bpmn2:documentation>
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
           <drools:metaValue><![CDATA[Find seminar]]></drools:metaValue>
@@ -114,7 +115,7 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_BB77C3B6-10A0-4EA8-A015-142D48BC1EB7</bpmn2:incoming>
       <bpmn2:outgoing>_AB2411AF-2A42-47C0-8B97-232D865F470D</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_xDtTsJ0jEeqJZarPKLkCUw">
+      <bpmn2:ioSpecification id="_UoDV8J0kEeqJZarPKLkCUw">
         <bpmn2:dataInput id="_5A90E225-5E28-4860-9562-36C5F5063D2D_AcceptCharsetInputX" drools:dtype="String" itemSubjectRef="__5A90E225-5E28-4860-9562-36C5F5063D2D_AcceptCharsetInputXItem" name="AcceptCharset"/>
         <bpmn2:dataInput id="_5A90E225-5E28-4860-9562-36C5F5063D2D_AcceptHeaderInputX" drools:dtype="String" itemSubjectRef="__5A90E225-5E28-4860-9562-36C5F5063D2D_AcceptHeaderInputXItem" name="AcceptHeader"/>
         <bpmn2:dataInput id="_5A90E225-5E28-4860-9562-36C5F5063D2D_AuthTypeInputX" drools:dtype="String" itemSubjectRef="__5A90E225-5E28-4860-9562-36C5F5063D2D_AuthTypeInputXItem" name="AuthType"/>
@@ -133,7 +134,7 @@
         <bpmn2:dataInput id="_5A90E225-5E28-4860-9562-36C5F5063D2D_UsernameInputX" drools:dtype="String" itemSubjectRef="__5A90E225-5E28-4860-9562-36C5F5063D2D_UsernameInputXItem" name="Username"/>
         <bpmn2:dataInput id="_5A90E225-5E28-4860-9562-36C5F5063D2D_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
         <bpmn2:dataOutput id="_5A90E225-5E28-4860-9562-36C5F5063D2D_ResultOutputX" drools:dtype="com.muni.seminarorganizer.Seminar" itemSubjectRef="__5A90E225-5E28-4860-9562-36C5F5063D2D_ResultOutputXItem" name="Result"/>
-        <bpmn2:inputSet id="_xDtTsZ0jEeqJZarPKLkCUw">
+        <bpmn2:inputSet id="_UoDV8Z0kEeqJZarPKLkCUw">
           <bpmn2:dataInputRefs>_5A90E225-5E28-4860-9562-36C5F5063D2D_AcceptCharsetInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_5A90E225-5E28-4860-9562-36C5F5063D2D_AcceptHeaderInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_5A90E225-5E28-4860-9562-36C5F5063D2D_AuthTypeInputX</bpmn2:dataInputRefs>
@@ -152,46 +153,46 @@
           <bpmn2:dataInputRefs>_5A90E225-5E28-4860-9562-36C5F5063D2D_UsernameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_5A90E225-5E28-4860-9562-36C5F5063D2D_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_xDtTsp0jEeqJZarPKLkCUw">
+        <bpmn2:outputSet id="_UoDV8p0kEeqJZarPKLkCUw">
           <bpmn2:dataOutputRefs>_5A90E225-5E28-4860-9562-36C5F5063D2D_ResultOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_xDtTs50jEeqJZarPKLkCUw">
+      <bpmn2:dataInputAssociation id="_UoDV850kEeqJZarPKLkCUw">
         <bpmn2:targetRef>_5A90E225-5E28-4860-9562-36C5F5063D2D_MethodInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_xDtTtJ0jEeqJZarPKLkCUw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_xDtTtZ0jEeqJZarPKLkCUw"><![CDATA[GET]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_xDtTtp0jEeqJZarPKLkCUw">_5A90E225-5E28-4860-9562-36C5F5063D2D_MethodInputX</bpmn2:to>
+        <bpmn2:assignment id="_UoDV9J0kEeqJZarPKLkCUw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_UoDV9Z0kEeqJZarPKLkCUw"><![CDATA[GET]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_UoDV9p0kEeqJZarPKLkCUw">_5A90E225-5E28-4860-9562-36C5F5063D2D_MethodInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_xDtTt50jEeqJZarPKLkCUw">
+      <bpmn2:dataInputAssociation id="_UoDV950kEeqJZarPKLkCUw">
         <bpmn2:targetRef>_5A90E225-5E28-4860-9562-36C5F5063D2D_ResultClassInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_xDtTuJ0jEeqJZarPKLkCUw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_xDtTuZ0jEeqJZarPKLkCUw"><![CDATA[com.muni.seminarorganizer.Seminar]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_xDtTup0jEeqJZarPKLkCUw">_5A90E225-5E28-4860-9562-36C5F5063D2D_ResultClassInputX</bpmn2:to>
+        <bpmn2:assignment id="_UoDV-J0kEeqJZarPKLkCUw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_UoDV-Z0kEeqJZarPKLkCUw"><![CDATA[com.muni.seminarorganizer.Seminar]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_UoDV-p0kEeqJZarPKLkCUw">_5A90E225-5E28-4860-9562-36C5F5063D2D_ResultClassInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_xDtTu50jEeqJZarPKLkCUw">
+      <bpmn2:dataInputAssociation id="_UoDV-50kEeqJZarPKLkCUw">
         <bpmn2:targetRef>_5A90E225-5E28-4860-9562-36C5F5063D2D_UrlInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_xDtTvJ0jEeqJZarPKLkCUw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_xDtTvZ0jEeqJZarPKLkCUw"><![CDATA[http://localhost:7071/api/seminars?lookup=#{name}]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_xDtTvp0jEeqJZarPKLkCUw">_5A90E225-5E28-4860-9562-36C5F5063D2D_UrlInputX</bpmn2:to>
+        <bpmn2:assignment id="_UoDV_J0kEeqJZarPKLkCUw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_UoDV_Z0kEeqJZarPKLkCUw"><![CDATA[http://localhost:7071/api/seminars?lookup=#{name}]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_UoDV_p0kEeqJZarPKLkCUw">_5A90E225-5E28-4860-9562-36C5F5063D2D_UrlInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_xDtTv50jEeqJZarPKLkCUw">
+      <bpmn2:dataInputAssociation id="_UoDV_50kEeqJZarPKLkCUw">
         <bpmn2:targetRef>_5A90E225-5E28-4860-9562-36C5F5063D2D_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_xDtTwJ0jEeqJZarPKLkCUw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_xDtTwZ0jEeqJZarPKLkCUw"><![CDATA[Rest]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_xDtTwp0jEeqJZarPKLkCUw">_5A90E225-5E28-4860-9562-36C5F5063D2D_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_UoDWAJ0kEeqJZarPKLkCUw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_UoDWAZ0kEeqJZarPKLkCUw"><![CDATA[Rest]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_UoDWAp0kEeqJZarPKLkCUw">_5A90E225-5E28-4860-9562-36C5F5063D2D_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_xDtTw50jEeqJZarPKLkCUw">
+      <bpmn2:dataOutputAssociation id="_UoDWA50kEeqJZarPKLkCUw">
         <bpmn2:sourceRef>_5A90E225-5E28-4860-9562-36C5F5063D2D_ResultOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>seminar</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
     </bpmn2:task>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_xDtTxJ0jEeqJZarPKLkCUw">
-    <bpmndi:BPMNPlane id="_xDtTxZ0jEeqJZarPKLkCUw" bpmnElement="SeminarOrganizer.LookupSeminar">
+  <bpmndi:BPMNDiagram id="_UoDWBJ0kEeqJZarPKLkCUw">
+    <bpmndi:BPMNPlane id="_UoDWBZ0kEeqJZarPKLkCUw" bpmnElement="SeminarOrganizer.LookupSeminar">
       <bpmndi:BPMNShape id="shape__5A90E225-5E28-4860-9562-36C5F5063D2D" bpmnElement="_5A90E225-5E28-4860-9562-36C5F5063D2D">
         <dc:Bounds height="102.0" width="154.0" x="673.0" y="227.0"/>
       </bpmndi:BPMNShape>
@@ -218,12 +219,12 @@
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_xDtTxp0jEeqJZarPKLkCUw" type="BPSimData">
+  <bpmn2:relationship id="_UoDWBp0kEeqJZarPKLkCUw" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5A90E225-5E28-4860-9562-36C5F5063D2D" id="_xDtTx50jEeqJZarPKLkCUw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5A90E225-5E28-4860-9562-36C5F5063D2D" id="_UoDWB50kEeqJZarPKLkCUw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -243,7 +244,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_DA28C7B9-7FA0-4B21-BE52-50D814A64592" id="_xDtTyJ0jEeqJZarPKLkCUw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_DA28C7B9-7FA0-4B21-BE52-50D814A64592" id="_UoDWCJ0kEeqJZarPKLkCUw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -263,7 +264,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_4AF876A6-33F5-46F2-A172-D461AD86071C" id="_xDtTyZ0jEeqJZarPKLkCUw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_4AF876A6-33F5-46F2-A172-D461AD86071C" id="_UoDWCZ0kEeqJZarPKLkCUw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -273,7 +274,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_xDtToJ0jEeqJZarPKLkCUw</bpmn2:source>
-    <bpmn2:target>_xDtToJ0jEeqJZarPKLkCUw</bpmn2:target>
+    <bpmn2:source>_UoDV4J0kEeqJZarPKLkCUw</bpmn2:source>
+    <bpmn2:target>_UoDV4J0kEeqJZarPKLkCUw</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
