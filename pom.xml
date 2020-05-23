@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.muni</groupId>
   <artifactId>SeminarOrganizer</artifactId>
-  <version>1.0.8-SNAPSHOT</version>
+  <version>1.0.9-SNAPSHOT</version>
   <packaging>kjar</packaging>
   <name>SeminarOrganizer</name>
   <description>Website which helps organizers of private seminars find lecturers. The lecturers register on the website and put in lectures they can teach with dates when they are available. The organizers then can search and book available lectures on a chosen date.
