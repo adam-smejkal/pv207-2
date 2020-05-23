@@ -23,6 +23,9 @@ public class Seminar implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Duration in days")
 	private java.lang.Integer duration;
 
+	@org.kie.api.definition.type.Label(value = "Id")
+	private java.lang.String id;
+
 	public Seminar() {
 	}
 
@@ -58,12 +61,22 @@ public class Seminar implements java.io.Serializable {
 		this.startDate = startDate;
 	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
 	public Seminar(java.lang.String name, java.lang.String information,
-			java.util.Date startDate, java.lang.Integer duration) {
+			java.util.Date startDate, java.lang.Integer duration,
+			java.lang.String id) {
 		this.name = name;
 		this.information = information;
 		this.startDate = startDate;
 		this.duration = duration;
+		this.id = id;
 	}
 
 }
