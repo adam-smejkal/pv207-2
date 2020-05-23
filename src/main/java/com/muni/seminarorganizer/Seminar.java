@@ -12,6 +12,15 @@ public class Seminar implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
 
+	@org.kie.api.definition.type.Label(value = "Information")
+	private java.lang.String information;
+
+	@org.kie.api.definition.type.Label(value = "Start date")
+	private java.util.Date startDate;
+
+	@org.kie.api.definition.type.Label(value = "Duration in days")
+	private java.lang.Integer duration;
+
 	public Seminar() {
 	}
 
@@ -23,8 +32,36 @@ public class Seminar implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public Seminar(java.lang.String name) {
+	public java.lang.String getInformation() {
+		return this.information;
+	}
+
+	public void setInformation(java.lang.String information) {
+		this.information = information;
+	}
+
+	public java.util.Date getStartDate() {
+		return this.startDate;
+	}
+
+	public void setStartDate(java.util.Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public java.lang.Integer getDuration() {
+		return this.duration;
+	}
+
+	public void setDuration(java.lang.Integer duration) {
+		this.duration = duration;
+	}
+
+	public Seminar(java.lang.String name, java.lang.String information,
+			java.util.Date startDate, java.lang.Integer duration) {
 		this.name = name;
+		this.information = information;
+		this.startDate = startDate;
+		this.duration = duration;
 	}
 
 }
