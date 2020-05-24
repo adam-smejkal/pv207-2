@@ -6,12 +6,35 @@ package com.muni.seminarorganizer;
 
 public class Lecture implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Lecture() {
-    }
+	@org.kie.api.definition.type.Label(value = "Name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "Description")
+	private java.lang.String description;
 
+	public Lecture() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(java.lang.String description) {
+		this.description = description;
+	}
+
+	public Lecture(java.lang.String name, java.lang.String description) {
+		this.name = name;
+		this.description = description;
+	}
 
 }
