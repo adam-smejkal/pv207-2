@@ -6,12 +6,24 @@ package com.muni.seminarorganizer;
 
 public class PaymentResult implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public PaymentResult() {
-    }
+	@org.kie.api.definition.type.Label(value = "Status")
+	private java.lang.String status;
 
+	public PaymentResult() {
+	}
 
+	public java.lang.String getStatus() {
+		return this.status;
+	}
 
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
+	public PaymentResult(java.lang.String status) {
+		this.status = status;
+	}
 
 }
