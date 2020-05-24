@@ -1,0 +1,1 @@
+{"id":"33caf8a3-82bc-464c-a909-b2b663e7368e","name":"Task-taskform.frm","model":{"taskName":"Task","processId":"SeminarOrganizer.AddLecture","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}
