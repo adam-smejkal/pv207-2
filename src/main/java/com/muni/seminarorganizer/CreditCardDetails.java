@@ -6,12 +6,47 @@ package com.muni.seminarorganizer;
 
 public class CreditCardDetails implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public CreditCardDetails() {
-    }
+	@org.kie.api.definition.type.Label(value = "Credit card number")
+	private java.lang.String number;
+	@org.kie.api.definition.type.Label(value = "Expiration")
+	private java.lang.String expiration;
+	@org.kie.api.definition.type.Label(value = "CVC")
+	private java.lang.Integer cvc;
 
+	public CreditCardDetails() {
+	}
 
+	public java.lang.String getNumber() {
+		return this.number;
+	}
 
+	public void setNumber(java.lang.String number) {
+		this.number = number;
+	}
+
+	public java.lang.String getExpiration() {
+		return this.expiration;
+	}
+
+	public void setExpiration(java.lang.String expiration) {
+		this.expiration = expiration;
+	}
+
+	public java.lang.Integer getCvc() {
+		return this.cvc;
+	}
+
+	public void setCvc(java.lang.Integer cvc) {
+		this.cvc = cvc;
+	}
+
+	public CreditCardDetails(java.lang.String number,
+			java.lang.String expiration, java.lang.Integer cvc) {
+		this.number = number;
+		this.expiration = expiration;
+		this.cvc = cvc;
+	}
 
 }
