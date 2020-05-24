@@ -11,8 +11,8 @@ public class Lecture implements java.io.Serializable {
 
 	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label("Description")
-	private java.lang.String description;
+	@org.kie.api.definition.type.Label(value = "Information")
+	private java.lang.String information;
 
 	public Lecture() {
 	}
@@ -25,17 +25,17 @@ public class Lecture implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public java.lang.String getDescription() {
-		return this.description;
+	public java.lang.String getInformation() {
+		return this.information;
 	}
 
-	public void setDescription(java.lang.String description) {
-		this.description = description;
+	public void setInformation(java.lang.String information) {
+		this.information = information;
 	}
 
-	public Lecture(java.lang.String name, java.lang.String description) {
+	public Lecture(java.lang.String name, java.lang.String information) {
 		this.name = name;
-		this.description = description;
+		this.information = information;
 	}
 
 }
