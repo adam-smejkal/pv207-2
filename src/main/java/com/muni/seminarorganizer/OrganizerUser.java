@@ -6,12 +6,35 @@ package com.muni.seminarorganizer;
 
 public class OrganizerUser implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public OrganizerUser() {
-    }
+	@org.kie.api.definition.type.Label(value = "Name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "IdentityNumber")
+	private java.lang.String identityNumber;
 
+	public OrganizerUser() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getIdentityNumber() {
+		return this.identityNumber;
+	}
+
+	public void setIdentityNumber(java.lang.String identityNumber) {
+		this.identityNumber = identityNumber;
+	}
+
+	public OrganizerUser(java.lang.String name, java.lang.String identityNumber) {
+		this.name = name;
+		this.identityNumber = identityNumber;
+	}
 
 }
