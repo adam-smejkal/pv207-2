@@ -6,12 +6,35 @@ package com.muni.seminarorganizer;
 
 public class UserCredentials implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public UserCredentials() {
-    }
+	@org.kie.api.definition.type.Label(value = "Login")
+	private java.lang.String login;
+	@org.kie.api.definition.type.Label(value = "Password")
+	private java.lang.String password;
 
+	public UserCredentials() {
+	}
 
+	public java.lang.String getLogin() {
+		return this.login;
+	}
 
+	public void setLogin(java.lang.String login) {
+		this.login = login;
+	}
+
+	public java.lang.String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(java.lang.String password) {
+		this.password = password;
+	}
+
+	public UserCredentials(java.lang.String login, java.lang.String password) {
+		this.login = login;
+		this.password = password;
+	}
 
 }
